@@ -1,5 +1,4 @@
 import PropTypes from 'prop-types';
-import css from './UserDescription.module.css';
 
 export const UserDescription = ({ avatar, username, tag, location }) => {
   return (

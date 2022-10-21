@@ -1,11 +1,10 @@
 import PropTypes from 'prop-types';
 import { UserDescription } from './UserDescription/UserDescription';
 import { UserStats } from './UserStats/UserStats';
-import css from './User.module.css';
 
 export const User = ({ avatar, username, tag, location, stats }) => {
   return (
-    <div className={css.profile}>
+    <div className="profile">
       <UserDescription
         key={tag}
         avatar={avatar}
