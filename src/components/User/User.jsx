@@ -1,10 +1,11 @@
 import PropTypes from 'prop-types';
 import { UserDescription } from './UserDescription/UserDescription';
 import { UserStats } from './UserStats/UserStats';
+import {Card} from './User.styled'
 
 export const User = ({ avatar, username, tag, location, stats }) => {
   return (
-    <div className="profile">
+    <Card className="profile">
       <UserDescription
         key={tag}
         avatar={avatar}
@@ -12,10 +13,8 @@ export const User = ({ avatar, username, tag, location, stats }) => {
         tag={tag}
         location={location}
       />
-      <UserStats
-       stats={stats}
-      />
-    </div>
+      <UserStats stats={stats} />
+    </Card>
   );
 };
 

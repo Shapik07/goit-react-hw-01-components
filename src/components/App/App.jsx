@@ -5,9 +5,10 @@ import friends from 'data/friends.json';
 import { User } from 'components/User/User';
 import { Statistics } from 'components/Statistics/Statistics';
 import { FriendList } from 'components/FriendList/FriendList';
+import { Container } from './App.styled';
 export const App = () => {
   return (
-    <div>
+    <Container>
       <User
         key={userData.tag}
         avatar={userData.avatar}
@@ -17,7 +18,8 @@ export const App = () => {
         stats={userData.stats}
       />
       <Statistics title="UPLOAD STATS" stats={statistics} />
+      <Statistics stats={statistics} />
       <FriendList stats={friends} />
-    </div>
+    </Container>
   );
 };
