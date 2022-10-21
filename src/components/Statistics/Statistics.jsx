@@ -8,7 +8,7 @@ export const Statistics = ({ title = '', stats }) => {
         {stats.map(({ id, label, percentage }) => (
           <li className="item" key={id}>
             <span className="label">{label}</span>
-            <span className="percentage">{percentage}</span>
+            <span className="percentage">{percentage} %</span>
           </li>
         ))}
       </ul>
@@ -17,15 +17,8 @@ export const Statistics = ({ title = '', stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string,
-  id: PropTypes.string,
-  label: PropTypes.string,
-  percentage: PropTypes.number,
+  title: PropTypes.string.isRequired,
+  id: PropTypes.string.isRequired,
+  label: PropTypes.string.isRequired,
+  percentage: PropTypes.number.isRequired,
 };
-
-{
-  /* <li className="item" key={id}>
-  <span className="label">{label}</span>
-  <span className="percentage">{percentage}</span>
-</li>; */
-}
