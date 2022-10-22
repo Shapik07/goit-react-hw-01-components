@@ -7,31 +7,31 @@ export const UserStatsList = styled.ul`
   margin-bottom: 0px;
   padding-left: 0px;
   width: 100%;
-  border-top: 1px solid #696969;
+  border-top: ${props => `1px solid ${props.theme.colors.darkGray}`};
 `;
 export const UserStatsItem = styled.li`
   width: 100%;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #dcdcdc;
-  border-right: 1px solid black;
+  background-color: ${props => props.theme.colors.gray};
+  border-right: ${props => `1px solid ${props.theme.colors.darkGray}`};
   &:nth-of-type(3) {
     border-right: none;
-    border-bottom-right-radius: 15px;
+    border-bottom-right-radius: ${props => props.theme.radii.standard};
   }
   &:nth-of-type(1, 2) {
-    border-bottom-left-radius: 15px;
+    border-bottom-left-radius: ${props => props.theme.radii.standard};
   }
 `;
 export const UserStatsItemLabel = styled.span`
-  margin-top: 24px;
-  font-size: 24px;
-  color: #808080;
+  margin-top: ${props => props.theme.distances.s};
+  font-size: ${props => props.theme.fontSizes.small};
+  color: ${props => props.theme.colors.middleGray};
 `;
 
 export const UserStatsItemQuantity = styled.span`
   font-weight: bold;
-  font-size: 48px;
-  margin-bottom: 24px;
+  font-size: ${props => props.theme.fontSizes.big};
+  margin-bottom: ${props => props.theme.distances.s};
 `;

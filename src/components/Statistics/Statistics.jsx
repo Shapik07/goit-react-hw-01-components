@@ -1,3 +1,4 @@
+import { getRandomColor } from 'helpers/getRandomColor';
 import PropTypes from 'prop-types';
 import {
   Section,
@@ -17,9 +18,7 @@ export const Statistics = ({ title = '', stats }) => {
           <ListStatisticsElement
             className="item"
             style={{
-              backgroundColor: `#${Math.floor(
-                Math.random() * 16777215
-              ).toString(16)}`,
+              backgroundColor: `${getRandomColor()}`,
             }}
             key={id}
           >
@@ -37,7 +36,7 @@ export const Statistics = ({ title = '', stats }) => {
 };
 
 Statistics.propTypes = {
-  title: PropTypes.string.isRequired,
+  title: PropTypes.string,
   stats: PropTypes.arrayOf(
     PropTypes.shape({
       id: PropTypes.string.isRequired,

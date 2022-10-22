@@ -5,8 +5,9 @@ import transactions from 'data/transactions.json';
 import { User } from 'components/User/User';
 import { Statistics } from 'components/Statistics/Statistics';
 import { FriendList } from 'components/FriendList/FriendList';
-import { TransactionHistory } from '../TransactionHistory/TransactionHistory';
+import { TransactionHistory } from 'components/TransactionHistory/TransactionHistory';
 import { Container } from './App.styled';
+
 export const App = () => {
   return (
     <Container>

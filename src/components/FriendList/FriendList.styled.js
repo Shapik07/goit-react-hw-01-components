@@ -3,37 +3,36 @@ import styled from '@emotion/styled';
 export const FriendsList = styled.ul`
   display: flex;
   flex-direction: column;
-  width: 600px;
-  margin-bottom: 96px;
+  width: ${props => props.theme.elementWidth.s};
+  margin-bottom: ${props => props.theme.distances.l};
 `;
 export const FriendsListElement = styled.li`
   display: flex;
-  heigh: 200px;
-  margin-bottom: 24px;
-  background-color: white;
+  margin-bottom: ${props => props.theme.distances.s};
+  background-color: ${props => props.theme.colors.white};
   align-items: center;
-  padding-left: 12px;
+  padding-left: ${props => props.theme.distances.xs};
   box-shadow: 10px 10px 8px 2px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
+  border-radius: ${props => props.theme.radii.standard};
 `;
 export const FriendsListElementStatus = styled.span`
-  padding-right: 12px;
+  padding-right: ${props => props.theme.distances.xs};
   width: 50px;
-  heigh: 50px;
-  background-color: ${({ eventType }) => (eventType ? '#00FF00' : '#FF0000')};
+  border-radius: 50%;
+  background-color: ${({ eventType, theme }) =>
+    eventType ? theme.colors.green : theme.colors.red};
 `;
 
 export const FriendsListElementAvatar = styled.img`
   width: 150px;
-  border-radius: 15px;
-  background-image: linear-gradient(to bottom, blue 50%, yellow 50%);
-  margin-top: 24px;
-  margin-bottom: 24px;
-  margin-right: 12px;
+  border-radius: ${props => props.theme.radii.standard};
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.theme.colors.blue} 50%, ${props.theme.colors.yellow} 50%)`};
+  margin-top: ${props => props.theme.distances.s};
+  margin-bottom: ${props => props.theme.distances.s};
+  margin-right: ${props => props.theme.distances.xs};
 `;
 export const FriendsListElementName = styled.p`
-  font-size: 48px;
+  font-size: ${props => props.theme.fontSizes.big};
   font-weight: bold;
 `;
-
-

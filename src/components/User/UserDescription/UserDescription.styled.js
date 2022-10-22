@@ -4,34 +4,34 @@ export const Description = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding-top: 96px;
+  padding-top: ${props => props.theme.distances.l};
 `;
 
 export const Avatar = styled.img`
-  width: 300px;
-  heigh: 300px;
+  width: ${props => props.theme.elementWidth.xs};
   border-radius: 50%;
-  background-image: linear-gradient(to bottom, blue 50%, yellow 50%);
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.theme.colors.blue} 50%, ${props.theme.colors.yellow} 50%)`};
 `;
 
 export const UserName = styled.p`
   color: black;
   font-weight: bold;
-  font-size: 48px;
-  margin-top: 24px;
-  margin-bottom: 12px;
+  font-size: ${props => props.theme.fontSizes.big};
+  margin-top: ${props => props.theme.distances.s};
+  margin-bottom: ${props => props.theme.distances.xs};
 `;
 
 export const UserTag = styled.p`
   color: gray;
-  font-size: 24px;
+  font-size: ${props => props.theme.fontSizes.small};
   margin-top: 0px;
-  margin-bottom: 12px;
+  margin-bottom: ${props => props.theme.distances.xs};
 `;
 
 export const UserLocation = styled.p`
   margin-top: 0px;
-  margin-bottom: 24px;
-  color: gray;
-  margin-bottom: 96px;
+  margin-bottom: ${props => props.theme.distances.s};
+  color: ${props => props.theme.colors.middleGray};
+  margin-bottom: ${props => props.theme.distances.l};
 `;

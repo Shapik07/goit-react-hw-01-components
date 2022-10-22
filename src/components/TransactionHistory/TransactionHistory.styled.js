@@ -1,41 +1,41 @@
 import styled from '@emotion/styled';
 
 export const Table = styled.table`
-  width: 1000px;
+  width: ${props => props.theme.elementWidth.l};
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: white;
+  background-color: ${props => props.theme.colors.white};
   box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
-  border-radius: 15px;
-  margin-bottom: 96px;
+  border-radius: ${props => props.theme.radii.standard};
+  margin-bottom: ${props => props.theme.distances.l};
 `;
 
 export const Thead = styled.thead`
-  background-color: #1e90ff;
-  border-radius: 15px;
+  background-color: ${props => props.theme.colors.lightBlue};
+  border-radius: ${props => props.theme.radii.standard};
   width: 100%;
 `;
 
 export const TableString = styled.tr`
   display: flex;
   justify-content: space-around;
-  border-radius: 15px;
-  font-size: 48px;
+  padding-top: ${props => props.theme.distances.xs};
+  padding-bottom: ${props => props.theme.distances.xs};
+  border-radius: ${props => props.theme.radii.standard};
+  font-size: ${props => props.theme.fontSizes.big};
   width: 100%;
-  border: 1px solid #b0c4de;
 `;
 
-export const TableTitleString = styled.th`
-`;
+export const TableTitleString = styled.th``;
 
 export const Tbody = styled.tbody`
   display: flex;
   width: 100%;
-  border-radius: 15px;
+  border-radius: ${props => props.theme.radii.standard};
 
   &:nth-of-type(even) {
-    background-color: #dcdcdc;
+    background-color: ${props => props.theme.colors.gray};
   }
 `;
 
@@ -43,7 +43,9 @@ export const TableCell = styled.td`
   display: flex;
   justify-content: center;
   width: 100%;
-  font-size: 48px;
-  border-radius: 15px;
-  border: 1px solid #b0c4de;
+  padding-top: ${props => props.theme.distances.xs};
+  padding-bottom: ${props => props.theme.distances.xs};
+  font-size: ${props => props.theme.fontSizes.small};
+  border-radius: ${props => props.theme.radii.standard};
+  border: ${props => `1px solid ${props.theme.colors.gray}`};
 `;
