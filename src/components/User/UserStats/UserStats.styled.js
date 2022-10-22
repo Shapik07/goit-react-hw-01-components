@@ -20,7 +20,7 @@ export const UserStatsItem = styled.li`
     border-right: none;
     border-bottom-right-radius: ${props => props.theme.radii.standard};
   }
-  &:nth-of-type(1, 2) {
+  &:nth-of-type(1) {
     border-bottom-left-radius: ${props => props.theme.radii.standard};
   }
 `;
