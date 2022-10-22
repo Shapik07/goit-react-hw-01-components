@@ -8,13 +8,6 @@ export const UserStatsList = styled.ul`
   padding-left: 0px;
   width: 100%;
   border-top: 1px solid #696969;
-   &:nth-of-type(3) {
-    border-bottom-right-radius: 15px;
-  }
-  &:nth-of-type(1) {
-    border-bottom-left-radius: 15px;
-  }
-  
 `;
 export const UserStatsItem = styled.li`
   width: 100%;
@@ -27,8 +20,7 @@ export const UserStatsItem = styled.li`
     border-right: none;
     border-bottom-right-radius: 15px;
   }
-  &:nth-of-type(1) {
-    border-right: 1px solid black;
+  &:nth-of-type(1, 2) {
     border-bottom-left-radius: 15px;
   }
 `;

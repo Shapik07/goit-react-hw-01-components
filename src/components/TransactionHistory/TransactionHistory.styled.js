@@ -8,6 +8,7 @@ export const Table = styled.table`
   background-color: white;
   box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
   border-radius: 15px;
+  margin-bottom: 96px;
 `;
 
 export const Thead = styled.thead`
@@ -33,7 +34,7 @@ export const Tbody = styled.tbody`
   width: 100%;
   border-radius: 15px;
 
-  &:nth-child(even) {
+  &:nth-of-type(even) {
     background-color: #dcdcdc;
   }
 `;
