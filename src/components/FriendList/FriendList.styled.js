@@ -4,6 +4,7 @@ export const FriendsList = styled.ul`
   display: flex;
   flex-direction: column;
   width: 600px;
+  margin-bottom: 96px;
 `;
 export const FriendsListElement = styled.li`
   display: flex;
@@ -35,4 +36,4 @@ export const FriendsListElementName = styled.p`
   font-weight: bold;
 `;
 
-// style={{ backgroundColor: `#${isOnline ? '00FF00 ' : }` }}
+
