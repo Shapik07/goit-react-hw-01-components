@@ -1,11 +1,11 @@
 import styled from '@emotion/styled';
 
 export const Section = styled.section`
-  width: ${props => props.theme.elementWidth.m};
+  width: ${props => props.theme.spacing(200)};
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: ${props => props.theme.distances.l};
+  margin-bottom: ${props => props.theme.spacing(24)};
   box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
     0 6.7px 5.3px rgba(0, 0, 0, 0.048), 0 12.5px 10px rgba(0, 0, 0, 0.06),
     0 22.3px 17.9px rgba(0, 0, 0, 0.072), 0 41.8px 33.4px rgba(0, 0, 0, 0.086),
@@ -20,8 +20,8 @@ export const Title = styled.h2`
   width: 100%;
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: ${props => props.theme.distances.m};
-  padding-bottom: ${props => props.theme.distances.m};
+  padding-top: ${props => props.theme.spacing(12)};
+  padding-bottom: ${props => props.theme.spacing(12)};
 `;
 
 export const ListStatistics = styled.ul`
@@ -38,8 +38,8 @@ export const ListStatisticsElement = styled.li`
   flex-direction: column;
   align-items: center;
   width: 100%;
-  padding-top: ${props => props.theme.distances.s};
-  padding-bottom: ${props => props.theme.distances.s};
+  padding-top: ${props => props.theme.spacing(6)};
+  padding-bottom: ${props => props.theme.spacing(6)};
 `;
 
 export const ListStatisticsElementLabel = styled.span`

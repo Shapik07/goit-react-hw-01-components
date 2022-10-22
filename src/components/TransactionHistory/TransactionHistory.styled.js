@@ -1,14 +1,14 @@
 import styled from '@emotion/styled';
 
 export const Table = styled.table`
-  width: ${props => props.theme.elementWidth.l};
+  width: ${props => props.theme.spacing(250)};
   display: flex;
   flex-direction: column;
   align-items: center;
   background-color: ${props => props.theme.colors.white};
   box-shadow: inset 0 0 10px 5px rgba(0, 0, 0, 0.3);
   border-radius: ${props => props.theme.radii.standard};
-  margin-bottom: ${props => props.theme.distances.l};
+  margin-bottom: ${props => props.theme.spacing(24)};
 `;
 
 export const Thead = styled.thead`
@@ -20,8 +20,8 @@ export const Thead = styled.thead`
 export const TableString = styled.tr`
   display: flex;
   justify-content: space-around;
-  padding-top: ${props => props.theme.distances.xs};
-  padding-bottom: ${props => props.theme.distances.xs};
+  padding-top: ${props => props.theme.spacing(3)};
+  padding-bottom: ${props => props.theme.spacing(3)};
   border-radius: ${props => props.theme.radii.standard};
   font-size: ${props => props.theme.fontSizes.big};
   width: 100%;
@@ -43,8 +43,8 @@ export const TableCell = styled.td`
   display: flex;
   justify-content: center;
   width: 100%;
-  padding-top: ${props => props.theme.distances.xs};
-  padding-bottom: ${props => props.theme.distances.xs};
+  padding-top: ${props => props.theme.spacing(3)};
+  padding-bottom: ${props => props.theme.spacing(3)};
   font-size: ${props => props.theme.fontSizes.small};
   border-radius: ${props => props.theme.radii.standard};
   border: ${props => `1px solid ${props.theme.colors.gray}`};

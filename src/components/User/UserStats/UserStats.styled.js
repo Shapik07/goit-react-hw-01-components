@@ -25,7 +25,7 @@ export const UserStatsItem = styled.li`
   }
 `;
 export const UserStatsItemLabel = styled.span`
-  margin-top: ${props => props.theme.distances.s};
+  margin-top: ${props => props.theme.spacing(6)};
   font-size: ${props => props.theme.fontSizes.small};
   color: ${props => props.theme.colors.middleGray};
 `;
@@ -33,5 +33,5 @@ export const UserStatsItemLabel = styled.span`
 export const UserStatsItemQuantity = styled.span`
   font-weight: bold;
   font-size: ${props => props.theme.fontSizes.big};
-  margin-bottom: ${props => props.theme.distances.s};
+  margin-bottom: ${props => props.theme.spacing(6)};
 `;
