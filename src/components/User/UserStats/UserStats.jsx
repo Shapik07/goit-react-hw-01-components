@@ -9,19 +9,19 @@ import {
 export const UserStats = ({ stats }) => {
   return (
     <UserStatsList className="stats">
-      <UserStatsItem id="1">
+      <UserStatsItem >
         <UserStatsItemLabel className="label">Followers</UserStatsItemLabel>
         <UserStatsItemQuantity className="quantity">
           {stats.followers}
         </UserStatsItemQuantity>
       </UserStatsItem>
-      <UserStatsItem id="2">
+      <UserStatsItem >
         <UserStatsItemLabel className="label">Views</UserStatsItemLabel>
         <UserStatsItemQuantity className="quantity">
           {stats.views}
         </UserStatsItemQuantity>
       </UserStatsItem>
-      <UserStatsItem id="3">
+      <UserStatsItem >
         <UserStatsItemLabel className="label">Likes</UserStatsItemLabel>
         <UserStatsItemQuantity className="quantity">
           {stats.likes}
