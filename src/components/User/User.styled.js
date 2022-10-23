@@ -13,3 +13,76 @@ export const Card = styled.div`
   border-radius: ${props => `${props.theme.radii.standard}`};
   margin-bottom: ${props => props.theme.spacing(24)};
 `;
+
+export const Description = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: ${props => props.theme.spacing(24)};
+`;
+
+export const Avatar = styled.img`
+  width: ${props => props.theme.spacing(75)};
+  border-radius: 50%;
+  background-image: ${props =>
+    `linear-gradient(to bottom, ${props.theme.colors.blue} 50%, ${props.theme.colors.yellow} 50%)`};
+`;
+
+export const UserName = styled.p`
+  color: black;
+  font-weight: bold;
+  font-size: ${props => props.theme.fontSizes.big};
+  margin-top: ${props => props.theme.spacing(6)};
+  margin-bottom: ${props => props.theme.spacing(3)};
+`;
+
+export const UserTag = styled.p`
+  color: gray;
+  font-size: ${props => props.theme.fontSizes.small};
+  margin-top: 0px;
+  margin-bottom: ${props => props.theme.spacing(3)};
+`;
+
+export const UserLocation = styled.p`
+  margin-top: 0px;
+  margin-bottom: ${props => props.theme.spacing(6)};
+  color: ${props => props.theme.colors.middleGray};
+  margin-bottom: ${props => props.theme.spacing(24)};
+`;
+
+export const UserStatsList = styled.ul`
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin-bottom: 0px;
+  padding-left: 0px;
+  width: 100%;
+  border-top: ${props => `1px solid ${props.theme.colors.darkGray}`};
+`;
+
+export const UserStatsItem = styled.li`
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: ${props => props.theme.colors.gray};
+  border-right: ${props => `1px solid ${props.theme.colors.darkGray}`};
+  &:nth-of-type(3) {
+    border-right: none;
+    border-bottom-right-radius: ${props => props.theme.radii.standard};
+  }
+  &:nth-of-type(1) {
+    border-bottom-left-radius: ${props => props.theme.radii.standard};
+  }
+`;
+export const UserStatsItemLabel = styled.span`
+  margin-top: ${props => props.theme.spacing(6)};
+  font-size: ${props => props.theme.fontSizes.small};
+  color: ${props => props.theme.colors.middleGray};
+`;
+
+export const UserStatsItemQuantity = styled.span`
+  font-weight: bold;
+  font-size: ${props => props.theme.fontSizes.big};
+  margin-bottom: ${props => props.theme.spacing(6)};
+`;
