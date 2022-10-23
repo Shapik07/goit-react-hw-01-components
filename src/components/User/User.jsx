@@ -1,7 +1,7 @@
 import PropTypes from 'prop-types';
 import { UserDescription } from './UserDescription/UserDescription';
 import { UserStats } from './UserStats/UserStats';
-import {Card} from './User.styled'
+import { Card } from './User.styled';
 
 export const User = ({ avatar, username, tag, location, stats }) => {
   return (

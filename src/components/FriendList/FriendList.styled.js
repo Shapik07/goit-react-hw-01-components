@@ -17,10 +17,13 @@ export const FriendsListElement = styled.li`
 `;
 export const FriendsListElementStatus = styled.span`
   padding-right: ${props => props.theme.spacing(3)};
-  width: 50px;
+  display: block;
+  width: 20px;
+  height: 30px;
   border-radius: 50%;
+  margin-right: ${props => props.theme.spacing(3)};
   background-color: ${({ eventType, theme }) =>
-    eventType ? theme.colors.green : theme.colors.red};
+    eventType ? theme.colors.red : theme.colors.green};
 `;
 
 export const FriendsListElementAvatar = styled.img`
