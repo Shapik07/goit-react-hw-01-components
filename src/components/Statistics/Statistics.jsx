@@ -9,7 +9,7 @@ import {
   ListStatisticsElementPercentage,
 } from './Statistics.styled';
 
-export const Statistics = ({ title = '', stats }) => {
+export const Statistics = ({ title, stats }) => {
   return (
     <Section className="statistics">
       {title && <Title className="title">{title}</Title>}

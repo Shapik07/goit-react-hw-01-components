@@ -11,9 +11,15 @@ import {
   UserStatsItem,
   UserStatsItemLabel,
   UserStatsItemQuantity,
-} from './User.styled';
+} from './Profile.styled';
 
-export const User = ({ avatar, username, tag, location, stats }) => {
+export const Profile = ({
+  avatar,
+  username,
+  tag,
+  location,
+  stats: { followers, views, likes },
+}) => {
   return (
     <Card className="profile">
       <Description className="description">
@@ -26,19 +32,19 @@ export const User = ({ avatar, username, tag, location, stats }) => {
         <UserStatsItem>
           <UserStatsItemLabel className="label">Followers</UserStatsItemLabel>
           <UserStatsItemQuantity className="quantity">
-            {stats.followers}
+            {followers}
           </UserStatsItemQuantity>
         </UserStatsItem>
         <UserStatsItem>
           <UserStatsItemLabel className="label">Views</UserStatsItemLabel>
           <UserStatsItemQuantity className="quantity">
-            {stats.views}
+            {views}
           </UserStatsItemQuantity>
         </UserStatsItem>
         <UserStatsItem>
           <UserStatsItemLabel className="label">Likes</UserStatsItemLabel>
           <UserStatsItemQuantity className="quantity">
-            {stats.likes}
+            {likes}
           </UserStatsItemQuantity>
         </UserStatsItem>
       </UserStatsList>
@@ -46,7 +52,7 @@ export const User = ({ avatar, username, tag, location, stats }) => {
   );
 };
 
-User.propTypes = {
+Profile.propTypes = {
   username: PropTypes.string.isRequired,
   tag: PropTypes.string.isRequired,
   location: PropTypes.string.isRequired,
